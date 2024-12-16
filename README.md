@@ -334,7 +334,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ---
 
-```json
+```bash
 curl --location 'http://localhost:9090/addSubject' \
 --data '{
     "name": "english",
