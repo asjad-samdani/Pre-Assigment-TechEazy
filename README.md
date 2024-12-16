@@ -119,23 +119,23 @@ Where:
 
 1. **Clone the repository**
 
-   ```bash
-   git clone <repository-url>
-   cd Pre_BootCamp
-   ```
+```bash
+git clone <repository-url>
+cd Pre_BootCamp
+```
 
 2. **Configure the Database:**
 
    Update src/main/resources/application.properties as needed::
 
-   ```bash
-   # H2 Database configuration
-    spring.datasource.url=jdbc:h2:mem:prebootcampdb
-    spring.datasource.driverClassName=org.h2.Driver
-    spring.datasource.username=<Your-username>
-    spring.datasource.password=<Your-password>
-    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-   ```
+```bash
+ # H2 Database configuration
+  spring.datasource.url=jdbc:h2:mem:prebootcampdb
+  spring.datasource.driverClassName=org.h2.Driver
+  spring.datasource.username=<Your-username>
+  spring.datasource.password=<Your-password>
+  spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+```
 
 3. **Build and Run the Backend**
 
@@ -168,7 +168,7 @@ The application will be available at http://localhost:9090.
 
 ---
 
-```json
+```bash
 curl --location 'http://localhost:9090/register' \
 --header 'Content-Type: application/json' \
 n--data '{
@@ -201,7 +201,7 @@ n--data '{
 
 ---
 
-```json
+```bash
 curl --location 'http://localhost:9090/authentication' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -217,7 +217,7 @@ curl --location 'http://localhost:9090/authentication' \
 
 ---
 
-```json
+```bash
 {
   "token": "<jwt-token>"
 }
@@ -242,8 +242,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ---
 
-```json
-
+```bash
 curl --location 'http://localhost:9090/addStudent' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer ...' \
@@ -260,6 +259,7 @@ curl --location 'http://localhost:9090/addStudent' \
 ```json
 {
   "message": "Student added successfully"
+}
 ```
 
 - 201 Created: Donation successfully added.
@@ -288,7 +288,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ---
 
-```json
+```bash
 curl --location 'http://localhost:9090/getStudent' \
 --header 'Authorization: Bearer <>'
 ```
@@ -300,7 +300,7 @@ curl --location 'http://localhost:9090/getStudent' \
 
 ---
 
-```json
+```bash
 [
   {
     "id": 1,
@@ -351,7 +351,7 @@ curl --location 'http://localhost:9090/addSubject' \
 
 ---
 
-```json
+```bash
 {
   "messsage": "Subject added successfully"
 }
@@ -374,7 +374,7 @@ curl --location 'http://localhost:9090/addSubject' \
 
 ### Request Body
 
-```json
+```bash
 curl --location 'http://localhost:9090/getSubject' \
 --header 'Authorization: Bearer <>'
 ```
@@ -386,7 +386,7 @@ curl --location 'http://localhost:9090/getSubject' \
 - 201 Created: Donation successfully added.
 - 403 Forbidden: Invalid or expired JWT token.
 
-```json
+```bash
 [
   {
     "id": 1,
