@@ -217,7 +217,7 @@ curl --location 'http://localhost:9090/authentication' \
 
 ---
 
-```bash
+```makefile
 {
   "token": "<jwt-token>"
 }
@@ -300,7 +300,7 @@ curl --location 'http://localhost:9090/getStudent' \
 
 ---
 
-```bash
+```json
 [
   {
     "id": 1,
@@ -351,7 +351,7 @@ curl --location 'http://localhost:9090/addSubject' \
 
 ---
 
-```bash
+```json
 {
   "messsage": "Subject added successfully"
 }
@@ -386,7 +386,7 @@ curl --location 'http://localhost:9090/getSubject' \
 - 201 Created: Donation successfully added.
 - 403 Forbidden: Invalid or expired JWT token.
 
-```bash
+```json
 [
   {
     "id": 1,
